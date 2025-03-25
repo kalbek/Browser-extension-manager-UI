@@ -1,0 +1,132 @@
+/* css reset */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+/* 3. Enable keyword animations */
+html {
+  interpolate-size: allow-keywords;
+}
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  /* Default (light) theme */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+
+  /* Neutral Colors */
+  --neutral-900: hsl(227, 75%, 14%);
+  --neutral-800: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+
+  /* Red Colors */
+  --red-400: hsl(3, 86%, 64%);
+  --red-500: hsl(3, 71%, 56%);
+  --red-700: hsl(3, 77%, 44%);
+
+  /* Light Gradient */
+  --light-gradient: linear-gradient(
+    90deg,
+    hsl(200, 60%, 99%),
+    hsl(217, 61%, 90%)
+  );
+
+  /* Dark Gradient */
+  --dark-gradient: linear-gradient(
+    90deg,
+    hsl(227, 75%, 14%),
+    hsl(226, 25%, 17%)
+  );
+}
+
+/* Dark theme */
+.dark-mode {
+  background-color: var(--neutral-900);
+  color: var(--neutral-100);
+}
+
+/* Apply variables */
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("./") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#theme-toggle {
+  margin-top: 1rem;
+  border: 0px;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+#theme-icon {
+  width: 17px;
+  height: 17px;
+}
+
+/* define fonts */
